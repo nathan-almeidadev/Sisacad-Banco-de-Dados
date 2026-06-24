@@ -113,7 +113,7 @@ Além disso, o projeto foi estruturado para permitir futuras integrações com s
 
 ```
     Funcionário
-             |
+      |
   ┌───┴────────┐
 Professor  Coordenador
 
