@@ -380,8 +380,6 @@ Nesta etapa foram definidos:
 
 ## 🚀 Próximas Etapas
 
-### Banco de Dados Físico
-
 ### Consultas SQL
 
 - [ ] Alunos por curso
