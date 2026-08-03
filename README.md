@@ -204,6 +204,7 @@ permitindo que um usuário possua múltiplos e-mails sem violar a Primeira Forma
 - sobrenome
 - dt_admissao
 - salario
+- id_endereco (FK)
 
 ### PROFESSOR
 
@@ -215,7 +216,7 @@ permitindo que um usuário possua múltiplos e-mails sem violar a Primeira Forma
 
 - matricula_funcional (PK/FK)
 - cod_curso (FK/UNIQUE)
-- tempo_coordenacao
+- tempo_coordenacao_meses
 
 ### CURSO
 
@@ -257,22 +258,20 @@ permitindo que um usuário possua múltiplos e-mails sem violar a Primeira Forma
 
 ### EMAIL_ALUNO
 
-- id_email (PK)
-- matricula (FK)
-- email
+- matricula (PK / FK)
+- nome_email (PK)
 
 ### EMAIL_FUNCIONARIO
 
-- id_email (PK)
-- matricula_funcional (FK)
-- email
+- matricula_funcional (PK / FK)
+- nome_email (PK)
 
 ### PROFESSOR_DISCIPLINA
 
 - matricula_funcional (FK)
 - cod_disciplina (FK)
 
-### DISCIPLINA_CURSO
+### CURSO_DISCIPLINA
 
 - cod_disciplina (FK)
 - cod_curso (FK)
@@ -368,11 +367,11 @@ Nesta etapa foram definidos:
 - [x] Modelagem Conceitual (MER)
 - [x] Modelagem Lógica
 - [x] Documentação inicial
+- [x] Modelo Físico SQL
+- [x] Inserção de dados fictícios
 
 #### Em desenvolvimento:
 
-- [ ] Modelo Físico SQL
-- [ ] Inserção de dados fictícios
 - [ ] Consultas SQL
 - [ ] Dashboard Power BI
 - [ ] API Python
@@ -382,21 +381,6 @@ Nesta etapa foram definidos:
 ## 🚀 Próximas Etapas
 
 ### Banco de Dados Físico
-
-- [ ] Criar script schema.sql
-- [ ] Definir constraints
-- [ ] Implementar chaves estrangeiras
-- [ ] Criar índices
-
----
-
-### População de Dados
-
-- [ ] Criar seed.sql
-- [ ] Gerar dados fictícios
-- [ ] Simular ambiente acadêmico
-
----
 
 ### Consultas SQL
 
