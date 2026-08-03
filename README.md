@@ -7,11 +7,11 @@
 
 Este repositório contém o desenvolvimento completo do SISACAD (Sistema Acadêmico Universitário), projetado como meu primeiro projeto de portfólio durante o primeiro semestre de Engenharia de Software.
 
-O projeto contempla todas as etapas de modelagem de banco de dados, desde a compreensão das regras de negócio até a construção dos modelos conceitual e lógico, servindo como base para futuras implementações físicas em SQL, integração com APIs em Python e análises em Power BI.
+O projeto contempla todas as etapas de modelagem de banco de dados, desde a compreensão das regras de negócio até a construção dos modelos conceitual e lógico, servindo como base para futuras implementações em integrações com APIs em Python e análises em Power BI.
 
 O principal objetivo é aplicar, de forma prática, conceitos fundamentais de bancos de dados relacionais (OLTP), garantindo integridade, consistência, redução de redundâncias e aderência às boas práticas de modelagem.
 
-**Observação:** Este projeto foi desenvolvido com apoio das ferramentas de Inteligência Artificial OpenAI ChatGPT e Google Gemini como recursos complementares de estudo, revisão e documentação.
+**Observação:** Este projeto foi desenvolvido com apoio das ferramentas de Inteligência Artificial OpenAI ChatGPT, ClaudeAI e Google Gemini como recursos complementares de estudo, revisão e documentação.
 
 ---
 
