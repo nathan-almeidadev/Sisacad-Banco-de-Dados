@@ -241,6 +241,7 @@ permitindo que um usuário possua múltiplos e-mails sem violar a Primeira Forma
 
 ### MATRICULA
 
+- id_matricula (PK)
 - matricula (FK)
 - cod_turma (FK)
 - dt_matricula
@@ -275,6 +276,48 @@ permitindo que um usuário possua múltiplos e-mails sem violar a Primeira Forma
 
 - cod_disciplina (FK)
 - cod_curso (FK)
+
+### Resumo da Base de Dados
+
+Atualmente o banco de dados possui:
+
+- 50 endereços
+- 5 cursos
+- 30 disciplinas
+- 20 funcionários
+- 10 professores
+- 5 coordenadores
+- 100 alunos
+- 100 e-mails de alunos
+- 20 e-mails de funcionários
+- 30 turmas
+- 150 matrículas
+- Relacionamentos N:M entre cursos e disciplinas
+- Relacionamentos N:M entre professores e disciplinas
+
+---
+
+## 🔒 Regras de Integridade Implementadas
+
+O banco foi desenvolvido utilizando restrições para garantir a consistência dos dados.
+
+Foram implementadas:
+
+- Chaves Primárias (PRIMARY KEY)
+- Chaves Estrangeiras (FOREIGN KEY)
+- Restrições UNIQUE
+- Restrições CHECK
+- Valores DEFAULT
+- Integridade Referencial entre todas as entidades
+
+Exemplos de validações:
+
+- Nota entre 0 e 10
+- Frequência entre 0% e 100%
+- Salário maior que zero
+- Turno limitado a Matutino, Vespertino ou Noturno
+- Impedimento de matrícula duplicada na mesma turma
+
 
 ---
 
@@ -320,10 +363,10 @@ Nesta etapa foram definidos:
 └──────┬──────┘
        │
        ▼
-┌─────────────┐
-│ Python API  │
-│ FastAPI     │
-└──────┬──────┘
+┌────────────────┐
+│ Python API     │
+│ FastAPI/Flask  │
+└──────┬─────────┘
        │
        ▼
 ┌─────────────┐
@@ -359,7 +402,7 @@ Nesta etapa foram definidos:
 
 ## 📌 Status do Projeto
 
-### Versão Atual: v0.1
+### Versão Atual: v0.2
 
 #### Concluído:
 
@@ -368,9 +411,12 @@ Nesta etapa foram definidos:
 - [x] Modelagem Lógica
 - [x] Documentação inicial
 - [x] Modelo Físico SQL
-- [x] Inserção de dados fictícios
+- [x] Implementação das restrições de integridade (CHECK, UNIQUE e DEFAULT)
+- [x] Criação das tabelas associativas
+- [x] População do banco com dados fictícios consistentes
+- [x] Implementação das chaves primárias e estrangeiras
 
-#### Em desenvolvimento:
+#### Próxima fase:
 
 - [ ] Consultas SQL
 - [ ] Dashboard Power BI
@@ -433,15 +479,19 @@ Durante o desenvolvimento deste projeto foram aplicados conceitos de:
 - Cardinalidades
 - Generalização e Especialização
 - Relacionamentos N:M
-- SQL
 - PostgreSQL
 - Análise de Requisitos
+- Integridade de Dados
+- Constraints SQL
+- PostgreSQL
+- SQL DDL
+- SQL DML
 
 ---
 
 ## 📚 Aprendizados
 
-Este projeto permitiu compreender como transformar regras de negócio em estruturas relacionais eficientes, aplicando conceitos fundamentais de Banco de Dados que servirão como base para projetos futuros envolvendo SQL, Engenharia de Dados, Business Intelligence e Desenvolvimento Backend.
+Este projeto permitiu compreender como transformar regras de negócio em estruturas relacionais eficientes, aplicando conceitos fundamentais de Banco de Dados que servirão como base para projetos futuros envolvendo SQL, Engenharia de Dados, Business Intelligence e Desenvolvimento Backend. Este projeto também permitiu consolidar conhecimentos sobre modelagem de bancos de dados relacionais, normalização, integridade referencial, implementação física em PostgreSQL e manipulação de dados utilizando SQL. Além da modelagem conceitual e lógica, foram aplicadas restrições de integridade, inserção de dados consistentes e preparação da base para futuras consultas analíticas, integração com APIs em Python e construção de dashboards em Power BI. O projeto representa uma evolução prática no aprendizado de Banco de Dados, Engenharia de Software e fundamentos para atuação em Engenharia de Dados.
 
 ---
 
@@ -467,6 +517,21 @@ Utilizado para:
 Todas as decisões de modelagem, regras de negócio, estrutura do banco de dados e evolução do projeto foram analisadas, adaptadas e implementadas pelo autor.
 As ferramentas de IA foram utilizadas como assistentes de aprendizagem e produtividade, desempenhando papel semelhante ao de materiais de consulta, documentação técnica e tutoriais.
 O objetivo foi potencializar o aprendizado prático em Engenharia de Software, Banco de Dados, SQL e análise de sistemas, mantendo a compreensão integral dos conceitos aplicados.
+
+---
+
+## 📈 Estatísticas do Projeto
+
+Atualmente o projeto contém aproximadamente:
+
+- 12 tabelas
+- Mais de 400 registros
+- Relacionamentos 1:1, 1:N e N:M
+- Especialização (Generalização)
+- Entidade Associativa
+- Atributos Compostos
+- Atributos Multivalorados
+- Banco desenvolvido em PostgreSQL
 
 ---
 
