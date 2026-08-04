@@ -165,7 +165,7 @@ Nome
 ```
 Endereco
 ├── Rua
-├── Casa
+├── Número
 ├── Bairro
 ├── Cidade
 └── Estado
@@ -397,6 +397,26 @@ Nesta etapa foram definidos:
 ### Business Intelligence (Futuro)
 
 - Power BI
+
+---
+
+## 📦 Dados para Testes
+
+O banco foi populado com dados fictícios para permitir a realização de consultas SQL e testes de integridade.
+
+Atualmente o projeto possui registros para:
+
+- Endereços
+- Cursos
+- Disciplinas
+- Funcionários
+- Professores
+- Coordenadores
+- Alunos
+- E-mails
+- Turmas
+- Matrículas
+- Relacionamentos entre cursos, disciplinas e professores
 
 ---
 
