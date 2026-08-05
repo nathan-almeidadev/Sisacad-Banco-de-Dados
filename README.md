@@ -420,6 +420,20 @@ Atualmente o projeto possui registros para:
 
 ---
 
+## 🔎 Consultas SQL Implementadas
+
+Até o momento foram desenvolvidas consultas envolvendo diferentes níveis de complexidade, incluindo:
+
+- Consultas básicas utilizando SELECT, WHERE e ORDER BY;
+- Consultas com INNER JOIN entre múltiplas tabelas;
+- Agrupamentos com GROUP BY;
+- Funções de agregação (COUNT, AVG, SUM, MAX e MIN);
+- Filtragem de grupos utilizando HAVING.
+
+As consultas implementadas permitem gerar relatórios acadêmicos, estatísticas e indicadores sobre alunos, cursos, disciplinas, professores, turmas e matrículas, servindo como base para os futuros dashboards em Power BI.
+
+---
+
 ## 📌 Status do Projeto
 
 ### Versão Atual: v0.2
@@ -435,11 +449,16 @@ Atualmente o projeto possui registros para:
 - [x] Criação das tabelas associativas
 - [x] População do banco com dados fictícios consistentes
 - [x] Implementação das chaves primárias e estrangeiras
+- [x] Consultas SQL básicas (SELECT, WHERE e ORDER BY)
+- [x] Consultas com INNER JOIN
+- [x] Consultas utilizando GROUP BY
+- [x] Funções de agregação (COUNT, AVG, SUM, MAX e MIN)
+- [x] Consultas utilizando HAVING
 
 #### Próxima fase:
 
-- [ ] Consultas SQL
 - [ ] Dashboard Power BI
+- [ ] Consultas avançadas (CASE, CTE, SUBQUERY e Window Functions)
 - [ ] API Python
 
 —
@@ -448,14 +467,13 @@ Atualmente o projeto possui registros para:
 
 ### Consultas SQL
 
-- [ ] Alunos por curso
-- [ ] Disciplinas por curso
-- [ ] Professores por disciplina
-- [ ] Histórico acadêmico do aluno
-- [ ] Média de notas por disciplina
-- [ ] Taxa de aprovação
-- [ ] Ranking de alunos por curso
-
+- [x] Consultas básicas (SELECT, WHERE e ORDER BY)
+- [x] INNER JOIN entre múltiplas tabelas
+- [x] Agrupamentos utilizando GROUP BY
+- [x] Funções de agregação
+- [x] Consultas utilizando HAVING
+- [ ] Consultas avançadas (CASE, CTE, SUBQUERY e Window Functions)
+      
 ---
 
 ### Dashboard Power BI
@@ -506,18 +524,27 @@ Durante o desenvolvimento deste projeto foram aplicados conceitos de:
 - PostgreSQL
 - SQL DDL
 - SQL DML
+- SQL DQL
+- INNER JOIN
+- GROUP BY
+- HAVING
+- Funções de Agregação
+- Modelagem OLTP
 
 ---
 
 ## 📚 Aprendizados
 
-Este projeto permitiu compreender como transformar regras de negócio em estruturas relacionais eficientes, aplicando conceitos fundamentais de Banco de Dados que servirão como base para projetos futuros envolvendo SQL, Engenharia de Dados, Business Intelligence e Desenvolvimento Backend. Este projeto também permitiu consolidar conhecimentos sobre modelagem de bancos de dados relacionais, normalização, integridade referencial, implementação física em PostgreSQL e manipulação de dados utilizando SQL. Além da modelagem conceitual e lógica, foram aplicadas restrições de integridade, inserção de dados consistentes e preparação da base para futuras consultas analíticas, integração com APIs em Python e construção de dashboards em Power BI. O projeto representa uma evolução prática no aprendizado de Banco de Dados, Engenharia de Software e fundamentos para atuação em Engenharia de Dados.
+Este projeto permitiu compreender como transformar regras de negócio em estruturas relacionais eficientes, aplicando conceitos fundamentais de Banco de Dados que servirão como base para projetos futuros envolvendo SQL, Engenharia de Dados, Business Intelligence e Desenvolvimento Backend. Também foram desenvolvidas consultas SQL voltadas à geração de relatórios gerenciais e indicadores acadêmicos, utilizando junções entre tabelas, agrupamentos e funções de agregação, preparando a base para análises em Business Intelligence. Este projeto também permitiu consolidar conhecimentos sobre modelagem de bancos de dados relacionais, normalização, integridade referencial, implementação física em PostgreSQL e manipulação de dados utilizando SQL. Além da modelagem conceitual e lógica, foram aplicadas restrições de integridade, inserção de dados consistentes e preparação da base para futuras consultas analíticas, integração com APIs em Python e construção de dashboards em Power BI. O projeto representa uma evolução prática no aprendizado de Banco de Dados, Engenharia de Software e fundamentos para atuação em Engenharia de Dados.
 
 ---
 
-## 🤖 Utilização de Inteligência Artificial
+## 🤖 Uso de Inteligência Artificial no Desenvolvimento
+
 Durante o desenvolvimento deste projeto, ferramentas de Inteligência Artificial foram utilizadas como apoio ao aprendizado, pesquisa e validação de conceitos, sem substituir o processo de análise, modelagem e implementação realizado pelo autor.
+
 ### Ferramentas Utilizadas
+
 #### OpenAI ChatGPT
 Utilizado para:
 - Esclarecimento de conceitos de Banco de Dados
@@ -526,6 +553,10 @@ Utilizado para:
 - Apoio na documentação do projeto
 - Sugestões de melhorias para o README
 - Esclarecimento de conceitos de SQL e normalização
+- Apoio na elaboração de desafios práticos de SQL para fixação do conteúdo
+- Revisão da sintaxe e boas práticas de consultas SQL
+- Discussão sobre estratégias de modelagem física e integridade de dados
+- Apoio na organização da evolução do projeto e documentação técnica 
 
 #### Google Gemini
 Utilizado para:
@@ -533,10 +564,24 @@ Utilizado para:
 - Comparação de abordagens de modelagem;
 - Apoio na estruturação da documentação;
 - Revisão textual e validação de descrições do projeto.
+- Apoio complementar na pesquisa de conceitos relacionados a Banco de Dados e SQL
+
+### Forma de Utilização
+
+As ferramentas de Inteligência Artificial foram utilizadas como apoio ao estudo e desenvolvimento do projeto, principalmente para:
+
+- Esclarecimento de dúvidas conceituais;
+- Revisão técnica de consultas SQL e modelagem;
+- Discussão de alternativas de implementação;
+- Organização e documentação do projeto;
+- Sugestão de desafios práticos para consolidação do aprendizado.
+
+Todas as implementações foram realizadas manualmente, sendo as sugestões analisadas e adaptadas conforme os requisitos do projeto.
+
 ### Responsabilidade sobre o Projeto
 Todas as decisões de modelagem, regras de negócio, estrutura do banco de dados e evolução do projeto foram analisadas, adaptadas e implementadas pelo autor.
 As ferramentas de IA foram utilizadas como assistentes de aprendizagem e produtividade, desempenhando papel semelhante ao de materiais de consulta, documentação técnica e tutoriais.
-O objetivo foi potencializar o aprendizado prático em Engenharia de Software, Banco de Dados, SQL e análise de sistemas, mantendo a compreensão integral dos conceitos aplicados.
+O objetivo foi potencializar o aprendizado prático em Engenharia de Software, Banco de Dados, SQL e análise de sistemas, mantendo a compreensão integral dos conceitos aplicados. As consultas SQL, a modelagem do banco de dados, as restrições de integridade e a documentação foram continuamente revisadas e ajustadas pelo autor durante o desenvolvimento, utilizando a IA como ferramenta de apoio técnico e de aprendizagem, e não como substituta da compreensão dos conceitos.
 
 ---
 
@@ -552,6 +597,9 @@ Atualmente o projeto contém aproximadamente:
 - Atributos Compostos
 - Atributos Multivalorados
 - Banco desenvolvido em PostgreSQL
+- Mais de 40 consultas SQL desenvolvidas
+- Consultas envolvendo até 4 tabelas em uma única instrução
+- Relatórios utilizando GROUP BY, HAVING e funções de agregação
 
 ---
 
