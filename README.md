@@ -683,11 +683,15 @@ Estudante de Engenharia de Software | Futuro Engenheiro de Dados e Desenvolvedor
 
 ### GitHub
 
-[github.com/nathan-almeidadev](https://github.com/nathan-almeidadev)
+<p align="Left">
+ </a>
+  <a href="https://www.linkedin.com/in/nathan-almeidavieira/"><img width="15px" alt="LinkedIn" title="LinkedIn" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"/> [github.com/nathan-almeidadev]
 
-### LinkedIn
+### LinkedIn 
 
-[linkedin.com/in/nathan-almeidavieira](https://www.linkedin.com/in/nathan-almeidavieira/)
+<p align="Left">
+ </a>
+  <a href="https://www.linkedin.com/in/nathan-almeidavieira/"><img width="15px" alt="LinkedIn" title="LinkedIn" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"/> [linkedin.com/in/nathan-almeidavieira]
 
 ---
 
