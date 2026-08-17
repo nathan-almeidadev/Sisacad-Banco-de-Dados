@@ -2,12 +2,12 @@
 
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)
 ![Database](https://img.shields.io/badge/Database-PostgreSQL-blue)
-![Backend](https://img.shields.io/badge/BackEnd-Python-green)
+![Backend](https://img.shields.io/badge/Backend-Python-green)
 ![BI](https://img.shields.io/badge/Future-PowerBI-orange)
 
 Este repositório contém o desenvolvimento completo do SISACAD (Sistema Acadêmico Universitário), projetado como meu primeiro projeto de portfólio durante o primeiro semestre de Engenharia de Software.
 
-O projeto contempla todas as etapas de modelagem de banco de dados, desde a compreensão das regras de negócio até a construção dos modelos conceitual e lógico, servindo como base para futuras implementações em integrações com APIs em Python e análises em Power BI.
+O projeto contempla as etapas de modelagem de banco de dados e implementação física em PostgreSQL, além do desenvolvimento inicial de uma aplicação em Python integrada ao banco de dados. A aplicação permite realizar operações como autenticação e cadastro de alunos e funcionários, utilizando Python e psycopg2 para comunicação com o PostgreSQL.
 
 O principal objetivo é aplicar, de forma prática, conceitos fundamentais de bancos de dados relacionais (OLTP), garantindo integridade, consistência, redução de redundâncias e aderência às boas práticas de modelagem.
 
@@ -355,7 +355,7 @@ Nesta etapa foram definidos:
 
 ---
 
-## 🏛️ Arquitetura Planejada
+## 🏛️ Arquitetura do Projeto
 
 ```
 ┌─────────────┐
@@ -364,14 +364,20 @@ Nesta etapa foram definidos:
        │
        ▼
 ┌────────────────┐
-│ Python API     │
-│ FastAPI/Flask  │
+│ Python         │
+│ psycopg2       │
 └──────┬─────────┘
        │
        ▼
-┌─────────────┐
-│  Power BI   │
-└─────────────┘
+┌────────────────┐
+│ API / Backend  │
+│ FastAPI        │
+└──────┬─────────┘
+       │
+       ▼
+ ┌─────────────┐
+ │  Power BI   │
+ └─────────────┘
 ```
 
 ---
@@ -387,16 +393,64 @@ Nesta etapa foram definidos:
 - PostgreSQL
 - pgAdmin 4
 
-### Backend (Futuro)
+### Backend
 
 - Python
+- psycopg2
+- python-dotenv
+
+### Backend (Planejado)
+
 - FastAPI
-- Flask
 - SQLAlchemy
 
 ### Business Intelligence (Futuro)
 
 - Power BI
+
+---
+
+## 🐍 Aplicação Python
+
+O projeto conta atualmente com uma aplicação Python integrada diretamente ao banco de dados PostgreSQL utilizando `psycopg2`.
+
+A aplicação permite realizar operações de cadastro e autenticação de usuários do sistema.
+
+### Funcionalidades implementadas
+
+#### Cadastro de Alunos
+- Cadastro de dados pessoais;
+- Seleção do curso;
+- Cadastro de endereço;
+- Criação de usuário e senha;
+- Confirmação dos dados antes da inserção;
+- Geração automática da matrícula;
+- Associação automática do aluno ao endereço cadastrado;
+- Login do aluno.
+
+#### Cadastro de Funcionários
+- Cadastro de dados pessoais;
+- Cadastro de data de admissão;
+- Cadastro de salário;
+- Cadastro de endereço;
+- Campo de complemento opcional;
+- Criação de senha;
+- Confirmação dos dados antes da inserção;
+- Geração automática da matrícula funcional;
+- Associação automática do funcionário ao endereço cadastrado;
+- Definição do tipo de funcionário:
+- Professor;
+- Coordenador.
+
+---
+
+### Estrutura
+
+```
+python/
+├── cadastro-aluno.py
+└── cadastro-funcionario.py
+```
 
 ---
 
@@ -436,7 +490,7 @@ As consultas implementadas permitem gerar relatórios acadêmicos, estatísticas
 
 ## 📌 Status do Projeto
 
-### Versão Atual: v0.2
+### Versão Atual: v0.3
 
 #### Concluído:
 
@@ -454,12 +508,24 @@ As consultas implementadas permitem gerar relatórios acadêmicos, estatísticas
 - [x] Consultas utilizando GROUP BY
 - [x] Funções de agregação (COUNT, AVG, SUM, MAX e MIN)
 - [x] Consultas utilizando HAVING
+- [x] Estrutura inicial da aplicação Python
+- [x] Integração Python + PostgreSQL
+- [x] Configuração de variáveis de ambiente
+- [x] Cadastro de alunos em Python
+- [x] Login de alunos
+- [x] Cadastro de funcionários em Python
+- [x] Login de funcionários
+- [x] Especialização de funcionários em Professor ou Coordenador
+- [x] Recuperação automática de IDs gerados pelo PostgreSQL
 
 #### Próxima fase:
 
+- [ ] Validação dos dados de entrada
+- [ ] Tratamento de exceções da aplicação
+- [ ] Organização da aplicação em módulos
+- [ ] API Python com FastAPI
+- [ ] Consultas SQL avançadas
 - [ ] Dashboard Power BI
-- [ ] Consultas avançadas (CASE, CTE, SUBQUERY e Window Functions)
-- [ ] API Python
 
 —
 
@@ -600,6 +666,10 @@ Atualmente o projeto contém aproximadamente:
 - Mais de 40 consultas SQL desenvolvidas
 - Consultas envolvendo até 4 tabelas em uma única instrução
 - Relatórios utilizando GROUP BY, HAVING e funções de agregação
+- Aplicação Python integrada ao PostgreSQL
+- 2 módulos Python
+- Autenticação de usuários
+- Cadastro de alunos e funcionários
 
 ---
 
