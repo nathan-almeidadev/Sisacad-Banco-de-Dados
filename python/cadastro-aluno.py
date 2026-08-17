@@ -129,32 +129,39 @@ elif opcao == 2:
         confirmacao_dados = str(input('\nSeus dados estão corretos? (Para confirmar, digite sua senha): '))
 
         if confirmacao_dados == senha:
-            print (f'\n--- Parabéns {primeiro_nome}! Você está matriculado no curso {nome_curso} ---')   
-            print (f'Seu usuário para efetuar login é: {usuario}\n')
-
             cursor.execute (
                 """ 
                 INSERT INTO endereco 
-                    (id_endereco, rua, numero, bairro, cidade, estado)
+                    (rua, numero, bairro, cidade, estado)
                 VALUES 
-                    (%s, %s, %s, %s, %s, %s)
+                    (%s, %s, %s, %s, %s)
+                RETURNING id_endereco
                 """,
 
-                (52, rua, numero, bairro, cidade, estado)
+                (rua, numero, bairro, cidade, estado)
             )
+
+            id_endereco = cursor.fetchone()[0]
+            
 
             cursor.execute (
                 """
                 INSERT INTO aluno 
-                    (matricula, cpf, primeiro_nome, sobrenome, dt_nascimento, cod_curso, id_endereco, usuario, senha)
+                    (cpf, primeiro_nome, sobrenome, dt_nascimento, cod_curso, id_endereco, usuario, senha)
                 VALUES 
-                    (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    (%s, %s, %s, %s, %s, %s, %s, %s)
+                RETURNING matricula
                 """,
-
-                (2026102, cpf, primeiro_nome, sobrenome, dt_nascimento, curso, 52, usuario, senha)
+                (cpf, primeiro_nome, sobrenome, dt_nascimento, curso, id_endereco, usuario, senha)
             )
 
+            matricula = cursor.fetchone()[0]
+
             connect_sisacad.commit()
+
+            print (f'\n--- Parabéns {primeiro_nome}! Você está matriculado no curso {nome_curso} ---\n')   
+            print (f'Seu número de matrícula é: {matricula}')
+            print (f'Seu usuário para efetuar login é: {usuario}\n')
 
             break
 
